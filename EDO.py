@@ -1,0 +1,15 @@
+from pyclbr import Function
+from sympy import *
+#x,C1 = symbols('x,C1')
+#y = symbols('y',cls = Function)
+a = 3*(10**-2)
+#numerador = y(x)/((((x-a)**2)+(y(x)**2))**(3/2)) - y(x)/((((x+a)**2)+(y(x)**2))**(3/2))
+#denominador = (x-a)/((((x-a)**2)+(y(x)**2))**(3/2)) - (x+a)/((((x+a)**2)+(y(x)**2))**(3/2))
+var ('y')
+var('x')
+numerador = y/((((x-a)**2)+(y**2))**(3/2)) - y/((((x+a)**2)+(y**2))**(3/2))
+denominador = (x-a)/((((x-a)**2)+(y**2))**(3/2)) - (x+a)/((((x+a)**2)+(y**2))**(3/2))
+integrate((numerador/denominador),x)
+#edo = Eq(diff(y(x),x),(numerador/denominador))
+#solution = dsolve(edo)
+print(edo)
